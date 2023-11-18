@@ -1,0 +1,71 @@
+.clock {
+  width: 100%;
+  height: 20%;
+  position: relative;
+  margin-top: 20vh;
+  box-sizing: border-box;
+}
+
+.clock__date {
+  font-size: 15px;
+  text-align: center;
+  font-weight: 500;
+  color: rgb(130, 129, 129);
+  margin-bottom: 10px;
+}
+
+.clock__time {
+  text-align: center;
+  font-size: 70px;
+  font-weight: 500;
+  color: black;
+}
+
+@media (max-width: 1300px) {
+  .clock__time {
+    font-size: 5vw;
+  }
+}
+
+@media (max-width: 1023px) {
+  .clock {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .clock__time {
+    font-size: 6vw;
+    text-align: start;
+    margin-left: 6vw;
+  }
+
+  .clock__date {
+    font-size: 2vw;
+    text-align: left;
+    font-weight: 500;
+    margin-left: 6vw;
+    color: rgb(241, 241, 241);
+  }
+}
+
+@media (max-width: 480px) {
+  .clock {
+    height: 90%;
+    margin: 0;
+  }
+
+  .clock__time {
+    text-align: center;
+    margin: 0;
+    font-size: 10vw;
+  }
+
+  .clock__date {
+    text-align: center;
+    margin: 0;
+    font-size: 3vw;
+    margin-bottom: 10px;
+  }
+}

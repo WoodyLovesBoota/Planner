@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Planner</title>
+  </head>
+  <body>
+    <div class="column-left">
+      <section class="todo">
+        <p>Todo</p>
+        <div class="todo-insert">
+          <p>오늘의 할 일은 무엇인가요?</p>
+          <form class="todo-insert__form">
+            <input class="todo-insert__input" autofocus type="text" />
+          </form>
+        </div>
+        <ul class="todo-list"></ul>
+      </section>
+    </div>
+
+    <div class="column-center">
+      <section class="clock">
+        <div>
+          <p class="clock__date"></p>
+        </div>
+        <div>
+          <p class="clock__time"></p>
+        </div>
+      </section>
+
+      <section class="search">
+        <form method="get" action="http://www.google.co.kr/search" target="_blank">
+          <input type="text" name="q" size="25" maxlength="255" value="" placeholder="Search on Google" />
+        </form>
+        <ul class="link-icons">
+          <li class="link-icon link-icon__youtube">
+            <a href="https://www.youtube.com" target="_blank"
+              ><span><i class="fab fa-youtube fa-4x" style="color: #ff0000"></i></span
+            ></a>
+          </li>
+          <li class="link-icon link-icon__github">
+            <a href="https://www.github.com" target="_blank"><i class="fab fa-github fa-4x" style="color: #8a10b7"></i></a>
+          </li>
+          <li class="link-icon link-icon__instagram">
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram-square fa-4x" style="color: #ff0aa5"></i></a>
+          </li>
+          <li class="link-icon link-icon__google">
+            <a href="https://www.google.com" target="_blank"><i class="fab fa-google fa-4x" style="color: #f0c62d"></i></a>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="column-right">
+      <section class="location-weather">
+        <img class="weather__icon" />
+        <div>
+          <i class="fas fa-map-marker-alt"></i>
+          <span class="location__city"></span>
+          <div class="weather-temp">
+            <span class="weather-temp__temperature"></span>
+            <span>&deg;C</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="timer">
+        <p>Focus Time</p>
+        <p class="timer__time">00 : 00 : 00</p>
+        <section class="timer-buttons">
+          <button class="timer-buttons__start timer__button">
+            <i class="fas fa-play fa-2x"></i>
+          </button>
+          <button class="timer-buttons__stop timer__button">
+            <i class="fas fa-stop fa-2x"></i>
+          </button>
+          <button class="timer-buttons__pause timer__button">
+            <i class="fas fa-pause fa-2x"></i>
+          </button>
+        </section>
+      </section>
+
+      <section class="dday">
+        <div class="dday__header">
+          <p>D-Day</p>
+          <button class="dday-add-button" type="button">+추가</button>
+        </div>
+        <div class="dday-list"></div>
+      </section>
+    </div>
+
+    <section class="add-dday">
+      <div class="add-dday__main">
+        <p>D-Day를 추가하세요!</p>
+        <form class="add-dday__form">
+          <input class="add-dday-input__name" type="text" placeholder="제목 - ex)생일" required />
+          <input class="add-dday-input__date" type="date" data-placeholder="날짜 선택" required aria-required="true" />
+          <div>
+            <button class="add-dday__submit-button" type="submit">저장</button>
+            <button class="add-dday__reset-button" type="reset">취소</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <script src="https://kit.fontawesome.com/a28619ea37.js" crossorigin="anonymous"></script>
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>

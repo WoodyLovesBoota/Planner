@@ -1,0 +1,123 @@
+@import "reset.css";
+@import "todo.css";
+@import "dday.css";
+@import "clock.css";
+@import "location-weather.css";
+@import "timer.css";
+@import "search.css";
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+* {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+
+body {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  width: 85vw;
+  height: 100vh;
+  background-image: url("../images/_.jpeg");
+  background-size: cover;
+  margin: auto;
+}
+
+.column-left {
+  width: 23vw;
+  height: 95vh;
+}
+
+.column-center {
+  width: 30vw;
+  height: 95vh;
+}
+
+.column-right {
+  width: 23vw;
+  height: 95vh;
+}
+
+ul {
+  list-style: none;
+}
+
+.unshow {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  body {
+    display: flex;
+  }
+
+  .column-center {
+    order: 1;
+    width: 55vw;
+  }
+
+  .column-left {
+    order: 2;
+    width: 0;
+    position: relative;
+  }
+
+  .column-right {
+    order: 3;
+    width: 40vw;
+  }
+
+  .search {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 170vh;
+  }
+
+  .column-center {
+    order: 1;
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10vw 0;
+  }
+
+  .column-left {
+    order: 3;
+    width: 100%;
+    height: 50vh;
+    position: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .column-right {
+    order: 2;
+    width: 100%;
+    height: 85vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .search {
+    display: none;
+  }
+
+  .location-weather {
+    display: none;
+  }
+}

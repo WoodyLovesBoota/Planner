@@ -1,0 +1,172 @@
+.todo-insert {
+  width: 100%;
+  position: relative;
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todo-insert form {
+  width: 100%;
+}
+
+.todo {
+  width: 100%;
+  height: 85%;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 10vh 0;
+  margin-bottom: 0;
+  padding: 30px;
+  color: white;
+  border-radius: 30px;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+.todo-list {
+  margin: 0;
+  padding: 0;
+}
+
+.todo-list li input {
+  display: none;
+}
+
+.todo-list li {
+  margin: 15px 0;
+  vertical-align: center;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.todo-list li:hover {
+  border: 1px solid transparent;
+}
+
+.todo-list li span {
+  margin: 0px 3vw;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.1vw;
+  vertical-align: center;
+}
+
+.todo-list li label {
+  display: inline-block;
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border: 2px solid rgb(153, 153, 153);
+  cursor: pointer;
+}
+
+.todo-list li button {
+  margin: 0px;
+  border: none;
+  position: absolute;
+  right: 5px;
+  font-size: 15px;
+  color: rgb(158, 158, 158);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.todo-list li button:hover {
+  color: white;
+}
+
+.checked input ~ span {
+  text-decoration: line-through;
+  color: rgb(148, 148, 148);
+}
+
+.checked input + label::after {
+  content: "V";
+  background-color: rgb(156, 156, 156);
+  color: rgb(156, 156, 156);
+  width: 13px;
+  height: 13px;
+  position: absolute;
+}
+
+.todo-insert__input {
+  font-size: 15px;
+  background-color: transparent;
+  margin-top: 30px;
+  border: none;
+  border-bottom: 1.5px solid rgb(255, 225, 58);
+  color: white;
+  padding: 3px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  width: 100%;
+}
+
+.todo-insert__input:focus {
+  outline: none;
+  border-bottom: 1.5px solid rgb(255, 225, 58);
+  transition: 0.3s ease-in-out;
+}
+
+.todo > p {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.todo-insert > p {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+@media (max-width: 1023px) {
+  .todo {
+    position: absolute;
+    top: 15vh;
+    left: -50vw;
+    width: 45vw;
+    height: 65vh;
+  }
+
+  .todo > p {
+    font-size: 2.5vw;
+  }
+
+  .todo-list li span {
+    margin: 0 4vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .todo {
+    position: inherit;
+    height: 100%;
+    width: 90%;
+    margin: 0;
+    margin-right: 0;
+  }
+
+  .todo > p {
+    font-size: 4vw;
+  }
+
+  .todo-insert {
+    margin: 30px 0;
+  }
+
+  .todo-insert > p {
+    font-size: 4vw;
+  }
+
+  .todo-list li span {
+    margin: 0 8vw;
+  }
+
+  .todo-list li span,
+  .todo-list li button {
+    font-size: 3vw;
+  }
+}

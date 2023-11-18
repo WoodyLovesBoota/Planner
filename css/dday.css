@@ -1,0 +1,274 @@
+.dday {
+  width: 100%;
+  height: 54%;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 5vh 0;
+  padding: 30px;
+  color: black;
+  border-radius: 30px;
+  position: relative;
+  font-weight: 550;
+  box-sizing: border-box;
+}
+
+.add-dday {
+  width: 400px;
+  height: 98%;
+  position: fixed;
+  top: 0;
+  right: -400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.3s ease-in-out;
+}
+
+.show {
+  right: 0;
+}
+
+.add-dday__main {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+}
+
+.add-dday__main > p {
+  font-size: 30px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  margin: 40px 0;
+}
+
+.add-dday-input__name {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px rgb(255, 255, 255) solid;
+  color: rgb(255, 255, 255);
+  width: 80%;
+  height: 30px;
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+.add-dday-input__name::placeholder {
+  color: rgb(181, 181, 181);
+}
+
+.add-dday-input__name:focus {
+  outline: none;
+}
+
+.add-dday-input__date {
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-bottom: 2px rgb(255, 255, 255) solid;
+  width: 80%;
+  height: 30px;
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+.dday-list {
+  width: 100%;
+  height: 90%;
+  margin-top: 20px;
+}
+
+.dday-element {
+  display: flex;
+  height: 5vh;
+  justify-content: space-between;
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: max(1.1vw, 15px);
+  font-weight: 500;
+  position: relative;
+  align-items: center;
+}
+
+.dday-element:hover {
+  border: 1px solid transparent;
+}
+
+.dday-element > div:first-child > p:last-child {
+  color: rgb(138, 137, 137);
+  font-size: max(0.9vw, 12px);
+  font-weight: 400;
+  margin-top: 3px;
+}
+
+.dday-element > button {
+  border: none;
+  top: 18px;
+  left: 50%;
+  font-size: max(0.7vw, 10px);
+  position: absolute;
+  cursor: pointer;
+  background-color: transparent;
+  color: gray;
+}
+
+.dday-element p:last-child {
+  font-size: max(1.5vw, 15px);
+  font-weight: 600;
+  color: rgb(90, 90, 90);
+}
+
+.dday__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dday__header > p {
+  font-size: 25px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.dday-add-button {
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: transparent;
+  color: black;
+}
+
+.dday-add-button:hover {
+  border: 1px solid transparent;
+}
+
+.add-dday-input__date::before {
+  content: attr(data-placeholder);
+  width: 100%;
+  font-size: 20px;
+  color: rgb(155, 155, 155);
+}
+
+.add-dday-input__date:focus::before,
+.add-dday-input__date:valid::before {
+  display: none;
+}
+
+.add-dday__main > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-dday__main {
+  position: relative;
+  color: gray;
+}
+
+.add-dday__submit-button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 5%;
+  background-color: rgb(71, 198, 160);
+  font-size: 16px;
+}
+
+.add-dday__reset-button {
+  background-color: transparent;
+  color: gray;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 5%;
+  background-color: rgb(219, 219, 252);
+  font-size: 16px;
+}
+
+@media (max-width: 1023px) {
+  .dday {
+    height: 59%;
+  }
+
+  .dday__header > p {
+    font-size: 2.5vw;
+  }
+
+  .dday-element {
+    font-size: min(15px, 2.5vw);
+    margin: 1vw;
+  }
+
+  .dday-element p:last-child {
+    font-size: min(17px, 2.5vw);
+  }
+
+  .dday-element > div:first-child > p:last-child {
+    font-size: min(12px, 1.5vw);
+  }
+
+  .dday-add-button {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dday {
+    width: 90%;
+    margin-top: 40px;
+  }
+
+  .dday__header > p {
+    font-size: 5vw;
+  }
+
+  .dday-element {
+    font-size: 4vw;
+    margin: 1vw;
+  }
+
+  .dday-element p:last-child {
+    font-size: 4vw;
+  }
+
+  .dday-element > div:first-child > p:last-child {
+    font-size: 2.5vw;
+  }
+
+  .dday-add-button {
+    font-size: 3vw;
+  }
+
+  .add-dday {
+    width: 100%;
+    height: 400px;
+    position: fixed;
+    top: -450px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: top 0.3s ease-in-out;
+  }
+
+  .show {
+    top: 0;
+  }
+
+  .add-dday__submit-button {
+    height: 10%;
+  }
+
+  .add-dday__reset-button {
+    height: 10%;
+  }
+}

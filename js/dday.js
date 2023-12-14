@@ -62,7 +62,7 @@ const createDdayElement = () => {
 
   main.appendChild(ddayElement);
 
-  deleteDdayButton.innerHTML = "X";
+  deleteDdayButton.innerHTML = "x";
   ddayElement.classList.add("dday-element");
 
   deleteDdayButton.addEventListener("click", () => {
@@ -77,7 +77,12 @@ const calculateDday = (target) => {
   const lest = Math.floor((target.getTime() - now.getTime()) / 1000);
   const lestDate = Math.floor(lest / (60 * 60 * 24));
 
-  const targetDate = lib.padInt(target.getFullYear()) + "-" + lib.padInt(Number(target.getMonth()) + 1) + "-" + lib.padInt(target.getDate());
+  const targetDate =
+    lib.padInt(target.getFullYear()) +
+    "-" +
+    lib.padInt(Number(target.getMonth()) + 1) +
+    "-" +
+    lib.padInt(target.getDate());
 
   const resultDate = "D - " + String(Number(lestDate) + 1);
 

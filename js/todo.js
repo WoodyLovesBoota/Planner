@@ -87,7 +87,7 @@ const addEventListenerToTodo = (e, item, button, checkBox) => {
  * add inner content to element
  */
 const addContentToTodo = (e, button, content) => {
-  button.innerHTML = "X";
+  button.innerHTML = "x";
   content.innerText = e;
 };
 
